@@ -8,6 +8,7 @@ library('rgdal')
 library('foreign')
 library('maptools')
 
+
 Balt_crime <- dbConnect(SQLite(), dbname="/home/jaunte/Baltimore.sqlite")
 dbListTables(Balt_crime)
 Narco <- dbGetQuery(Balt_crime, "Select * from Arrests where incidentOffense='87-Narcotics'", row.names=FALSE)
